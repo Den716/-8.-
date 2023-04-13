@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int people;
+            int expectation = 10;
+            int hour;
+            int minute;
+            
+            Console.WriteLine("Введите количество людей в очереди:");
+            people = Convert.ToInt32(Console.ReadLine());
+
+            hour = people * expectation / 60;
+            minute = people * expectation % 60;
+
+            Console.WriteLine($"Ваше время ожидания в очереди составит: {hour} часов и {minute} минут");
+            expectation = Convert.ToInt32(Console.ReadLine());
+            Console.ReadKey();
+        }
+    }
+}
